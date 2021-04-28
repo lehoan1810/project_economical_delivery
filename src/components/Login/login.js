@@ -10,6 +10,8 @@ import ButtonBorder from '../Buttons/ButtonBoder'
 const useStyles = makeStyles((theme) => ({
     img: {
         width: '110%',
+        paddingTop: '10vh',
+        paddingLeft: '10vh'
     },
     paper: {
         background: 'linear-gradient(252.22deg, rgba(244, 154, 103, 0.43) -0.33%, rgba(0, 56, 255, 0.6) 100%)',
@@ -19,8 +21,8 @@ const useStyles = makeStyles((theme) => ({
     Home: {
         width: '53px',
         height: '53px',
-        left: '18px',
-        top: '1px',
+        left: '10px',
+        top: '6px',
         position: 'relative',
         cursor:'pointer',
     },
@@ -35,7 +37,17 @@ const useStyles = makeStyles((theme) => ({
         position: 'absolute',
         right: '6vh',
         background: 'rgba(255, 255, 255, 0.73)',
-    }
+    },
+    ellipse: {
+        position: 'absolute',
+        width: '10vh',
+        height: '10vh',
+        left: '45px',
+        top: '22px',
+        borderRadius: '50%',
+        background: 'rgba(220, 215, 215, 0.92)',
+        boxShadow: '6px 6px 12px rgba(0, 0, 0, 0.25)'
+    },
     
 }))
 
@@ -44,7 +56,9 @@ const Login = () => {
     return ( 
         <div className={classes.paper}>
             <Link style={{ textDecoration: 'none', color: '#333' }} to='/'>
-                <img src={home} className={classes.Home} />
+                <div className={classes.ellipse}>
+                    <img src={home} className={classes.Home} />
+                </div>
 
             </Link>
             <ButtonBorder className={classes.btnSignUp}>

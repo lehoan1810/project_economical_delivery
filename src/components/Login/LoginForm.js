@@ -109,7 +109,7 @@ const useStyles = makeStyles((theme) => ({
     Key: {
         width: '35px',
         height: '35px',
-        left: '-9px',
+        left: '2px',
         top: '7px',
         position: 'relative',
         
@@ -117,10 +117,35 @@ const useStyles = makeStyles((theme) => ({
     User: {
         width: '35px',
         height: '35px',
-        left: '-9px',
+        left: '2px',
         top: '7px',
         position: 'relative',
-        
+    },
+    inputItem: {
+        width: '310px',
+        height: '45px',
+        left: '800px',
+        top: '90px',
+        backGround: '#fff',
+        border: 'none',
+        fontSize: '25px',
+        outlineStyle: 'none',
+        borderTopRightRadius: '15px',
+        borderBottomRightRadius: '15px'
+    },
+    iconUser: {
+        width: '40px',
+        height: '47px',
+        background: '#fff',
+        borderTopLeftRadius: '15px',
+        borderBottomLeftRadius: '15px',
+    },
+    iconKey: {
+        width: '40px',
+        height: '47px',
+        background: '#fff',
+        borderTopLeftRadius: '15px',
+        borderBottomLeftRadius: '15px',
     },
     Face: {
         width: '41px',
@@ -153,14 +178,16 @@ const LoginForm = () => {
                 </Typography>
             </Grid>
             <Grid item lg={12} className={classes.centerAlign}>
-                <img src={user} className={classes.User}/>
+                <div className={classes.iconUser}>
+                    <img src={user} className={classes.User}/>
+                </div>
                 <input type="text" className={classes.inputItem}
-                    
                 />
             </Grid>
             <Grid item lg={12} className={classes.centerAlign}>
-                <img src={key} className={classes.Key}/>
-
+                <div className={classes.iconKey}>
+                    <img src={key} className={classes.Key}/>
+                </div>
                 <input type="text" className={classes.inputItem}
                     
                 /> 
